@@ -8,7 +8,7 @@ const Buttons = ({ filterItem, setItem, menuItems }) => {
         {menuItems.map((Val, id) => {
           return (
             <button
-              className="btn-warning text-white p-1 px-2 mx-5"
+              className="btn-dark text-white p-1 px-2 mx-5 btn fw-bold"
               onClick={() => filterItem(Val)}
               key={id}
             >
@@ -17,7 +17,7 @@ const Buttons = ({ filterItem, setItem, menuItems }) => {
           );
         })}
         <button
-          className="btn-warning text-white p-1 px-3 mx-5"
+          className="btn-dark text-white p-1 px-3 mx-5 fw-bold btn"
           onClick={() => setItem(Data)}
         >
           All

@@ -1,0 +1,30 @@
+body{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+@media (min-width: 300px) and (max-width:575px) {
+    .btn{
+        margin: 0 2% !important;
+    }
+    .card{
+        padding: 0 4% !important;
+    }
+}
+@media (min-width: 576px) and (max-width:767px) {
+    .btn{
+        margin: 2% 4% !important;
+    }
+    .card{
+        padding: 0 4% !important;
+    }
+}
+@media (min-width: 768px) and (max-width:900px) {
+    .btn{
+        margin: 2% 5% !important;
+    }
+    .card{
+        padding: 0 4% !important;
+    }
+}
