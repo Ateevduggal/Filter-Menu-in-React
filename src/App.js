@@ -18,7 +18,7 @@ const App = () => {
     <>
       <div className="container-fluid">
         <div className="row">
-          <h1 className="col-12 text-center my-3 fw-bold">Our Menu</h1>
+          <h1 className="col-12 text-center my-3 fw-bold">Food Filtering App</h1>
           <Buttons
             filterItem={filterItem}
             setItem={setItem}
