@@ -1,33 +1,30 @@
 import React, { useState } from "react";
 import Data from "./Data";
-import Card from "./Card";
 import Buttons from "./Buttons";
+import Card from "./Card";
 
 const App = () => {
-  const [item, setItem] = useState(Data);
+  const [item, setItems] = useState(Data);
 
-  const menuItems = [...new Set(Data.map((Val) => Val.category))];
+  //create new array from Data  have only products categories
+  const menuItems = [...new Set(Data.map((val) => val.category))];
 
-  const filterItem = (curcat) => {
-    const newItem = Data.filter((newVal) => {
-      return newVal.category === curcat;
-    });
-    setItem(newItem);
-  };
+  console.log(menuItems);
+
   return (
-    <>
-      <div className="container-fluid">
-        <div className="row">
-          <h1 className="col-12 text-center my-3 fw-bold">Food Filtering App</h1>
-          <Buttons
-            filterItem={filterItem}
-            setItem={setItem}
-            menuItems={menuItems}
-          />
-          <Card item={item} />
-        </div>
-      </div>
-    </>
+    <div className="  container-fluid container">
+      <h1 className=" text-center p-4  text-primary"> PRODUCTS PROJECT </h1>
+
+
+{/* // send categories to show in   buttons component  */}
+      <Buttons menuItems={menuItems} />
+
+
+
+ {/* //    send products to card component  */}
+
+      <Card item={item} />
+    </div>
   );
 };
 
